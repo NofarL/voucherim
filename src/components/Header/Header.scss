@@ -1,0 +1,99 @@
+
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  background: var(--black);
+  padding: 10px 20px;
+  height: 65px;
+  z-index: 200;
+  
+  img {
+    width: 150px;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+  }
+
+  a {
+    text-decoration: none;
+    font-size: 1.05em;
+    margin: 0 0.6em;
+  }
+
+  .menu {
+    justify-content: center;
+
+    a {
+      color: var(--blue);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  .actions {
+    justify-content: flex-end;
+
+    a {
+      color: var(--orange);
+    }
+  }
+
+  .signin {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .signup {
+    padding: 5px 10px;
+    display: inline-block;
+    border: 2px solid var(--orange);
+    border-radius: 0.5em;
+    transition: color 300ms;
+
+    &:hover {
+      color: var(--white);
+    }
+  }
+
+  .menu a,
+  .signin {
+    &:after {
+      content: '';
+      display: block;
+      width: 0%;
+      height: 1px;
+      background: var(--white);
+      transition: width 300ms;
+    }
+
+    &:hover:after {
+      width: 100%;
+    }
+  }
+
+}
+
+.backdrop {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.3);
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+@media (max-width: 768px) {
+  div#root > header nav.menu,
+  div#root > header nav.actions {
+    display: none;
+  }
+}

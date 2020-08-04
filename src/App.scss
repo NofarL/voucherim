@@ -1,0 +1,35 @@
+
+@import './variables.scss';
+
+@font-face {
+  font-family: 'OpenSansHebrewRegular';
+  src: local('OpenSansHebrewRegular'), url('./assets/fonts/OpenSansHebrew-Regular.ttf') format('truetype');;
+}
+@font-face {
+  font-family: 'OpenSansHebrewLight';
+  src: local('OpenSansHebrewRegular'), url('./assets/fonts/OpenSansHebrew-Light.ttf') format('truetype');;
+}
+@font-face {
+  font-family: 'OpenSansHebrewBold';
+  src: local('OpenSansHebrewBold'), url('./assets/fonts/OpenSansHebrew-Bold.ttf') format('truetype');;
+}
+
+* {
+  font-family: 'OpenSansHebrewRegular', Arial;
+  letter-spacing: 1px;
+  box-sizing: border-box;
+}
+
+body {
+  direction: rtl;
+  margin: 0;
+  color: var(--black);
+}
+
+main {
+  margin-top: 65px;
+
+  &:not(.home) {
+    padding: 0 20px;
+  }
+}

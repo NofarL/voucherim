@@ -1,0 +1,75 @@
+
+header .hamburger {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: none;
+  align-items: center;
+
+  .toggle {
+    width: 2.5em;
+    height: 2.5em;
+    background: none;
+    border: 2px solid rgb(245, 180, 77);
+    border-radius: 0.5em;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font: inherit;
+    padding: 0;
+    outline: 0;
+
+    span {
+      position: relative;
+
+      &,
+      &:before,
+      &:after {
+        display: block;
+        height: 2px;
+        background: #fff;
+        border-radius: 1px;
+        width: 1.5em;
+        transition: background-color 300ms;
+      }
+
+      &:before,
+      &:after {
+        content: '';
+        position: absolute;
+      }
+
+      &:before {
+        top: -8px;
+      }
+
+      &:after {
+        bottom: -8px;
+      }
+    }
+
+    &:hover span {
+      &,
+      &:before,
+      &:after {
+        background: rgb(108, 181, 249);
+      }
+    }
+  }
+
+  &.open .toggle span {
+    &,
+    &:before,
+    &:after {
+      background: rgb(108, 181, 249);
+    }
+  }
+
+  @media (max-width: 768px) {
+    display: flex;
+  }
+}
