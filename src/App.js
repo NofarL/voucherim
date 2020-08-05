@@ -6,6 +6,7 @@ import {
 } from 'react-router-dom';
 import './App.scss';
 // Components.
+import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 // Pages.
@@ -17,6 +18,7 @@ import Thanks from './pages/Thanks/Thanks';
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Header />
       <Switch>
         <Route path="/" exact component={Home} />

@@ -24,6 +24,7 @@ body {
   direction: rtl;
   margin: 0;
   color: var(--black);
+  overflow-x: hidden;
 }
 
 main {
@@ -31,5 +32,6 @@ main {
 
   &:not(.home) {
     padding: 0 20px;
+    margin-bottom: 40px;
   }
 }
