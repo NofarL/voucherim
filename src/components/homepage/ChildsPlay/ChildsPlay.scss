@@ -1,0 +1,14 @@
+.childs-play {
+  flex-direction: column;
+
+  h2 {
+    font-size: 34px;
+    color: var(--orange-dark);
+    font-family: 'OpenSansHebrewLight', Arial;
+    margin: 0;
+  }
+
+  h2 ~ p {
+    text-align: center;
+  }
+}

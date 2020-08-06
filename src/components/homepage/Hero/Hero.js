@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import Fade from 'react-reveal/Fade';
-import YoutubeEmbed from '../YoutubeEmbed/YoutubeEmbed';
-import ScrollToAnchor from '../ScrollToAnchor/ScrollToAnchor';
+import YoutubeEmbed from '../../YoutubeEmbed/YoutubeEmbed';
+import ScrollToAnchor from '../../ScrollToAnchor/ScrollToAnchor';
 import './Hero.scss';
 
 const Hero = () => {

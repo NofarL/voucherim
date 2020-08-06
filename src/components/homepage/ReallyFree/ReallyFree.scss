@@ -1,0 +1,25 @@
+
+section.really-free {
+  flex-direction: column;
+  text-align: center;
+  padding: 50px 30px;
+
+  h2 {
+    color: var(--orange-dark);
+    font-size: 40px;
+    font-family: 'OpenSansHebrewLight', Arial;
+    margin: 0;
+  }
+
+  h3 {
+    color: var(--black);
+    font-family: 'OpenSansHebrewBold', Arial;
+    margin: 0;
+  }
+
+  p {
+    margin: 20px 0 0;
+    letter-spacing: 1px;
+    line-height: 25px;
+  }
+}
