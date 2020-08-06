@@ -1,0 +1,81 @@
+
+.childs-play {
+
+  .arrows {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .arrow {
+      background: #ccc;
+      width: 80px;
+      height: 54px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 25px;
+      position: relative;
+      border-top: 3px solid white;
+      border-bottom: 3px solid white;
+      transition: background-color 1s;
+
+      &.arrow1 {
+        width: 66px;
+        border-right: 3px solid white;
+      }
+      
+      &.arrow4 {
+        width: 88px;
+        border-left: 3px solid white;
+      }
+
+      &:not(.arrow4):after {
+        content: '';
+        display: block;
+        background: #ccc;
+        width: 34.36px;
+        height: 34.36px;
+        position: absolute;
+        left: -18px;
+        top: 6px;
+        z-index: 2;
+        transform: rotate(45deg);
+        border-left: 3px solid white;
+        border-bottom: 3px solid white;
+        transition: background-color 1s;
+      }
+
+      span {
+        z-index: 3;
+        font-family: inherit;
+        position: absolute;
+      }
+
+      &.arrow2 span,
+      &.arrow3 span {
+        left: 22px;
+      }
+
+      &.arrow4 span {
+        left: 27px;
+      }
+
+    }
+  }
+
+  .stage {
+    &.stage1 .arrow1,
+    &.stage1 .arrow1:after,
+    &.stage2 .arrow2,
+    &.stage2 .arrow2:after,
+    &.stage3 .arrow3,
+    &.stage3 .arrow3:after,
+    &.stage4 .arrow4,
+    &.stage4 .arrow4:after,
+    &.stage5 .arrow1,
+    &.stage5 .arrow1:after {
+      background: rgb(245, 180, 77);
+    }
+  }
+
+}

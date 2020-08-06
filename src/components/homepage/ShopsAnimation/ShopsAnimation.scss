@@ -1,4 +1,148 @@
 
 section.shops-animation {
-  margin: 0 0 20px;
+  padding: 0 0 20px;
+
+  & > div {
+    position: relative;
+    width: 660px;
+    height: 387px;
+  }
+
+  .shop {
+    position: absolute;
+    top: 22.39%;
+    width: 30.30%;
+
+    &.shop1 {
+      left: 0;
+    }
+
+    &.shop2 {
+      left: 34.85%;
+    }
+
+    &.shop3 {
+      left: 69.70%;
+    }
+  }
+
+  .person {
+    position: absolute;
+    width: 8.48%;
+    z-index: -1;
+
+    &.person2 {
+      animation: shopping 15s both ease-in-out reverse infinite;
+      transform: translateX(-71.43%);
+    }
+
+    &.person3 {
+      animation: shopping 16s both ease-in-out infinite 1.5s;
+      transform: translateX(-71.43%);
+    }
+
+    &.person4 {
+      animation: shopping 17s both ease-in-out reverse infinite 4.2s;
+      transform: translateX(-71.43%);
+    }
+
+    &.person5 {
+      animation: shopping 15s both ease-in-out infinite 6.3s;
+      transform: translateX(71.43%);
+    }
+
+    &.person6 {
+      animation: shopping 16s both ease-in-out reverse infinite 8.3s;
+      transform: translateX(71.43%);
+    }
+
+    &.person7 {
+      animation: shopping 17s both ease-in-out infinite 10.7s;
+      transform: translateX(71.43%);
+    }
+
+  }
+
+  .money {
+    position: absolute;
+    font-size: 44px;
+    color: green;
+    font-family: Tahoma;
+    font-weight: bold;
+    top: 8%;
+    animation: money 2s both infinite 6s;
+
+    &.money1 {
+      left: 8.33%;
+    }
+
+    &.money2 {
+      left: 43.18%;
+    }
+
+    &.money3 {
+      left: 78.03%;
+    }
+  }
+
+  @media (max-width: 900px) {
+    & > div {
+      width: 462px;
+      height: 271px;
+    }
+
+    .money {
+      font-size: 31px;
+    }
+  }
+
+  @media (max-width: 550px) {
+    & > div {
+      width: 324px;
+      height: 190px;
+    }
+
+    .money {
+      font-size: 22px;
+    }
+  }
+
+  @media (max-width: 450px) {
+    & > div {
+      width: 275px;
+      height: 161px;
+    }
+
+    .money {
+      font-size: 19px;
+    }
+  }
+
 }
+
+@keyframes shopping {
+  0% { left: 8.48%; top: 51.59%; }
+  7% { left: 8.48%; top: 80.53%; }
+  15% { left: 43.33%; top: 80.53%; }
+  22% { left: 43.33%; top: 51.59%; }
+
+  29% { left: 43.33%; top: 51.59%; }
+  36% { left: 43.33%; top: 80.53%; }
+  44% { left: 78.18%; top: 80.53%; }
+  51% { left: 78.18%; top: 51.59%; }
+  
+  58% { left: 78.18%; top: 51.59%; }
+  67% { left: 78.18%; top: 80.53%; }
+  82% { left: 8.48%; top: 80.53%; }
+  89% { left: 8.48%; top: 51.59%; }
+
+  100% { left: 8.48%; top: 51.59%; }
+}
+
+@keyframes money {
+  0% { opacity: 0; top: 8%; }
+  15% { opacity: 1; top: 8%; }
+  55% { opacity: 1; top: 8%; }
+  100% { opacity: 0; top: 0%; }
+}
+

@@ -11,4 +11,518 @@
   h2 ~ p {
     text-align: center;
   }
+
+  .desktop-only {
+    width: 700px;
+    height: 300px;
+    position: relative;
+    border: 1px solid #ccc;
+
+
+    img {
+      position: absolute;
+    }
+
+    .shop {
+      width: 28.57%;
+      bottom: 0;
+
+      &.orange {
+        left: 0;
+      }
+      
+      &.blue {
+        right: 0;
+      }
+    }
+
+    .coupon {
+      left: 43.57%;
+      bottom: 14.00%;
+      width: 4.29%;
+      z-index: 2;
+      opacity: 0;
+    }
+    
+    .person {
+      position: absolute;
+      width: 10.00%;
+      bottom: 7.33%;
+      left: 42.86%;
+    }
+    
+    .coins-multi {
+      position: absolute;
+      width: 11.43%;
+    }
+
+    .coin-single {
+      width: 5.71%;
+      position: absolute;
+    }
+
+    .stage {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      
+      /*****************************/
+      /*                           */
+      /*          STAGE 1          */
+      /*                           */
+      /*****************************/
+
+      &.stage1 {
+        .person {
+          left: 62.57%;
+          animation: fadeIn 1s both 2s;
+        }
+        
+        .coupon.orange {
+          opacity: 1;
+        }
+        
+        .coupon.orange {
+          left: 59.71%;
+          animation: fadeIn 1s both 2s, beating 0.5s infinite alternate 3s;
+          cursor: pointer;
+        }
+        
+        .coin-single {
+          opacity: 0;
+        }
+        
+        .coins-multi {
+          opacity: 0;
+        }
+      }
+
+      /*****************************/
+      /*                           */
+      /*          STAGE 2          */
+      /*                           */
+      /*****************************/
+
+      &.stage2 {
+        .coupon.orange {
+          left: 23.29%;
+          animation: couponBlueToOrange 3s both;
+        }
+
+        .person {
+          left: 27.14%;
+          animation: customerBlueToOrange 3s forwards;
+        }
+
+        .coins-multi {
+          left: 8.57%;
+          bottom: 58.33%;
+          animation: coinsOrange1 1s both 2.5s, beating-light 0.5s infinite alternate 4s;
+          cursor: pointer;
+        }
+
+        .coin-single {
+          opacity: 0;
+        }
+      }
+
+      /*****************************/
+      /*                           */
+      /*          STAGE 3          */
+      /*                           */
+      /*****************************/
+
+      &.stage3 {
+        
+        .person,
+        .coupon {
+          opacity: 0;
+        }
+
+        .coins-multi {
+          left: 8.57%;
+          bottom: 58.33%;
+          animation: coinsOrange2 2s both;
+        }
+
+        .coin-single {
+          left: 11.43%;
+          bottom: 58.33%;
+          animation: singleOrangeToBlue 2s both;
+        }
+
+        .person {
+          left: 28.57%;
+          animation: fadeIn 1s both 2s;
+        }
+
+        .coupon.blue {
+          left: 36.86%;
+          animation: fadeIn 1s both 2s, beating 0.5s infinite alternate 3s;
+          cursor: pointer;
+        }
+      }
+
+      /*****************************/
+      /*                           */
+      /*          STAGE 4          */
+      /*                           */
+      /*****************************/
+
+      &.stage4 {
+
+        .coupon.blue {
+          left: 36.86%;
+          animation: couponOrangeToBlue 3s forwards;
+        }
+
+        .person {
+          left: 28.57%;
+          animation: customerOrangeToBlue 3s forwards;
+        }
+
+        .coins-multi {
+          left: 79.57%;
+          bottom: 58.33%;
+          animation: coinsBlue1 1s both 2.5s, beating-light 0.5s infinite alternate 4s;
+          cursor: pointer;
+        }
+
+        .coin-single {
+          opacity: 0;
+        }
+      }
+
+      /*****************************/
+      /*                           */
+      /*          STAGE 5          */
+      /*                           */
+      /*****************************/
+
+      &.stage5 {
+
+        .person {
+          left: 62.57%;
+          animation: fadeIn 1s both 2s;
+        }
+
+        .coupon.orange {
+          opacity: 1;
+        }
+
+        .coupon.orange {
+          left: 59.71%;
+          animation: fadeIn 1s both 2s, beating 0.5s infinite alternate 3s;
+          cursor: pointer;
+        }
+
+        .coin-single {
+          opacity: 0;
+        }
+
+        .coins-multi {
+          opacity: 0;
+        }
+
+        .coins-multi {
+          left: 79.57%;
+          bottom: 58.33%;
+          animation: coinsBlue2 2s both;
+        }
+
+        .coin-single {
+          left: 11.43%;
+          bottom: 58.33%;
+          animation: singleBlueToOrange 2s both;
+        }
+
+        .person,
+        .coupon {
+          opacity: 0;
+        }
+      }
+
+    }
+
+    // @media (max-width: 800px) {
+    //   width: 630px;
+    //   height: 270px;
+
+    //   .text,
+    //   .arrows {
+    //     display: none !important;
+    //   }
+    // }
+
+    // @media (max-width: 700px) {
+    //   width: 490px;
+    //   height: 210px;
+    // }
+
+    // @media (max-width: 550px) {
+    //   display: none;
+    // }
+
+    @media (max-width: 800px) {
+      display: none;
+    }
+
+  } // .desktop-only
+
+
+  /*****************************/
+  /*                           */
+  /*       MOBILE FRAMES       */
+  /*                           */
+  /*****************************/
+
+  .mobile-only {
+    display: none;
+    width: 100%;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+
+    @media (max-width: 800px) {
+        display: grid;
+    }
+
+    @media (max-width: 450px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .stage {
+      border-top: 1px solid #ccc;
+      margin-top: 25px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+
+      p {
+        margin: 0;
+        padding: 5px 0;
+        line-height: 20px;
+      }
+
+      @media (max-width: 450px) {
+        margin-bottom: 20px;
+        width: 250px;
+      }
+    }
+
+    .frame {
+      border: 1px solid #222;
+      height: 150px;
+      position: relative;
+      overflow: hidden;
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: -1px;
+        left: -1px;
+        background: #ccc;
+        color: #222;
+        border: 1px solid #222;
+        font-family: 'OpenSansHebrewBold', Arial;
+        padding: 4px 7px;
+        z-index: 10;
+      }
+
+      &.frame1:before { content: '1'; }
+      &.frame2:before { content: '2'; }
+      &.frame3:before { content: '3'; }
+      &.frame4:before { content: '4'; }
+
+      img {
+        position: absolute;
+      }
+
+      .shop {
+        width: 70%;
+        bottom: 0;
+
+        &.orange {
+          left: -20%;
+        }
+
+        &.blue {
+          right: -20%;
+          transform: scaleX(-1);
+        }
+      }
+
+      .person {
+        bottom: 10px;
+        width: 30%;
+      }
+
+      .coupon {
+        bottom: 30px;
+        width: 20%;
+      }
+
+      .coins-multi {
+        width: 24%;
+        bottom: 5px;
+        left: 5px;
+      }
+
+      .coin-single {
+        width: 15%;
+        bottom: 15%;
+      }
+
+      &.frame1 {
+        .person {
+          right: 50%;
+        }
+
+        .coupon {
+          left: 5px;
+          animation: mobileCouponFadeIn 3s infinite backwards;
+        }
+      }
+
+      &.frame2 {
+        .person {
+          right: -2%;
+          animation: mobileCouponToOrange 3s infinite;
+        }
+
+        .coupon {
+          right: 25%;
+          animation: mobileCouponToOrange 3s infinite;
+        }
+      }
+
+      &.frame3 {
+        .shop {
+          &.orange {
+            left: -35%;
+          }
+
+          &.blue {
+            right: -35%;
+          }
+        }
+
+        .coin-single {
+          left: 15%;
+          animation: mobileCoinToBlue 3s infinite;
+        }
+      }
+
+      &.frame4 {
+        .person {
+          left: 50%;
+        }
+
+        .coupon {
+          right: 5px;
+          animation: mobileCouponFadeIn 3s infinite backwards;
+        }
+      }
+
+    }
+  } // .mobile-only
+
+ 
+
+} // .animation
+
+
+
+
+/*****************************/
+/*                           */
+/*         KEYFRAMES         */
+/*                           */
+/*****************************/
+
+@keyframes beating {
+  from { transform: scale(1); }
+  to { transform: scale(1.5); }
 }
+
+@keyframes beating-light {
+  from { transform: scale(1); }
+  to { transform: scale(1.2); }
+}
+
+@keyframes customerBlueToOrange {
+  0% { left: 62.57%; opacity: 1; }
+  80% { left: 28.57%; opacity: 1; }
+  100% { left: 27.14%; opacity: 0; }
+}
+
+@keyframes couponBlueToOrange {
+  0% { left: 59.71%; opacity: 1; }
+  80% { left: 25.71%; opacity: 1; }
+  100% { left: 24.29%; opacity: 0; }
+}
+
+@keyframes customerOrangeToBlue {
+  0% { left: 28.57%; opacity: 1; }
+  80% { left: 62.57%; opacity: 1; }
+  100% { left: 64.00%; opacity: 0; }
+}
+
+@keyframes couponOrangeToBlue {
+  0% { left: 36.86%; opacity: 1; }
+  80% { left: 70.86%; opacity: 1; }
+  100% { left: 72.29%; opacity: 0; }
+}
+
+@keyframes coinsOrange1 {
+  from { bottom: 70.00%; opacity: 0; }
+  to { bottom: 58.33%; opacity: 1; }
+}
+
+@keyframes coinsOrange2 {
+  from { bottom: 58.33%; opacity: 1; }
+  to { bottom: 36.66%; opacity: 0; }
+}
+
+@keyframes coinsBlue1 {
+  from { bottom: 70.00%; opacity: 0; }
+  to { bottom: 58.33%; opacity: 1; }
+}
+
+@keyframes coinsBlue2 {
+  from { bottom: 58.33%; opacity: 1; }
+  to { bottom: 36.66%; opacity: 0; }
+}
+
+@keyframes singleOrangeToBlue {
+  0% { left: 11.43%; bottom: 58.33%; opacity: 1; }
+  80% { left: 64.00%; bottom: 27.66%; opacity: 1; }
+  100% { left: 77.14%; bottom: 20.00%; opacity: 0; }
+}
+
+@keyframes singleBlueToOrange {
+  0% { left: 76.71%; bottom: 58.33%; opacity: 1; }
+  80% { left: 24.14%; bottom: 27.66%; opacity: 1; }
+  100% { left: 11.00%; bottom: 20.00%; opacity: 0; }
+}
+
+@keyframes mobileCouponFadeIn {
+  0% { opacity: 0; }
+  70% { opacity: 1; }
+  100% { opacity: 1; }
+}
+
+@keyframes mobileCouponToOrange {
+  0% { opacity: 1; transform: translateX(0%); }
+  30% { opacity: 1; transform: translateX(0%); }
+  100% { opacity: 0; transform: translateX(-180%); }
+}
+
+@keyframes mobileCoinToBlue {
+  0% { opacity: 1; transform: translate(0%, 0%); }
+  100% { opacity: 0; transform: translate(500%, 100%); }
+}
+

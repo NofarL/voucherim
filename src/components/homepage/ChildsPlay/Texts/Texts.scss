@@ -1,0 +1,27 @@
+
+.childs-play {
+
+  .text {
+    display: none;
+    margin-top: 17px;
+
+    h4,
+    p {
+      margin: 0;
+    }
+  }
+
+  .stage {
+    &.stage1 .text1,
+    &.stage2 .text2,
+    &.stage3 .text3,
+    &.stage4 .text4,
+    &.stage5 .text1 {
+        display: block;
+        opacity: 0;
+        animation: fadeIn 1s both 3s;
+    }
+  }
+
+}
+
