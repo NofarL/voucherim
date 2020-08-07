@@ -61,37 +61,37 @@ const ChildsPlay = () => {
           <div className="stage stage1">
             <p>1. הלקוח יוצא מהעסק הכחול עם שובר לעסק הכתום</p>
             <div className="frame frame1">
-              <img alt="shop blue frame1" className="shop blue" src={require('../../../images/shopBlue-cropped.svg')} />
-              <img alt="coupon orange frame1" className="coupon orange" src={require('../../../images/couponOrange-cropped.svg')} onClick={() => nextStage(2)} />
-              <img alt="person frame1" className="person" src={require('../../../images/person.svg')} />
+              <img alt="shop blue frame1" className="shop blue" src={shopBlue} />
+              <img alt="coupon orange frame1" className="coupon orange" src={couponOrange} onClick={() => nextStage(2)} />
+              <img alt="person frame1" className="person" src={person} />
             </div>
           </div>
 
           <div className="stage stage2">
             <p>2. הלקוח מממש את השובר בעסק הכתום</p>
             <div className="frame frame2">
-              <img alt="shop orange frame2" className="shop orange" src={require('../../../images/shopOrange-cropped.svg')} />
-              <img alt="coupon orange frame2" className="coupon orange" src={require('../../../images/couponOrange-cropped.svg')} onClick={() => nextStage(2)} />
-              <img alt="person frame2" className="person" src={require('../../../images/person.svg')} />
+              <img alt="shop orange frame2" className="shop orange" src={shopOrange} />
+              <img alt="coupon orange frame2" className="coupon orange" src={couponOrange} onClick={() => nextStage(2)} />
+              <img alt="person frame2" className="person" src={person} />
             </div>
           </div>
 
           <div className="stage stage3">
             <p>3. העסק הכתום נותן "עמלת תודה" לעסק הכחול</p>
             <div className="frame frame3">
-              <img alt="shop orange frame3" className="shop orange" src={require('../../../images/shopOrange-cropped.svg')} />
-              <img alt="shop blue frame3" className="shop blue" src={require('../../../images/shopBlue-cropped.svg')} />
-              <img alt="coins-multi frame3" className="coins-multi" src={require('../../../images/coin-new-multi.svg')} onClick={() => nextStage(stage === 2 ? 3 : 5)} />
-              <img alt="coin-single frame3" className="coin-single" src={require('../../../images/coin-new.svg')} />
+              <img alt="shop orange frame3" className="shop orange" src={shopOrange} />
+              <img alt="shop blue frame3" className="shop blue" src={shopBlue} />
+              <img alt="coins-multi frame3" className="coins-multi" src={coins} onClick={() => nextStage(stage === 2 ? 3 : 5)} />
+              <img alt="coin-single frame3" className="coin-single" src={coin} />
             </div>
           </div>
 
           <div className="stage stage4">
             <p>4. הלקוח יוצא מהעסק הכתום עם שובר לעסק הכחול</p>
             <div className="frame frame4">
-              <img alt="shop orange frame4" className="shop orange" src={require('../../../images/shopOrange-cropped.svg')} />
-              <img alt="coupon blue frame4" className="coupon blue" src={require('../../../images/couponBlue-cropped.svg')} onClick={() => nextStage(4)} />
-              <img alt="person frame4" className="person" src={require('../../../images/person.svg')} />
+              <img alt="shop orange frame4" className="shop orange" src={shopOrange} />
+              <img alt="coupon blue frame4" className="coupon blue" src={couponBlue} onClick={() => nextStage(4)} />
+              <img alt="person frame4" className="person" src={person} />
             </div>
           </div>
 
