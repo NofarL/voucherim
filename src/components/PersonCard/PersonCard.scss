@@ -1,0 +1,22 @@
+.person-card {
+  flex: 0 1 350px;
+  text-align: center;
+  margin: 10px;
+  padding: 1.5em;
+  border: 1px solid var(--grey-dark);
+
+  img {
+    width: 7em;
+    border-radius: 50%;
+    border: 1px solid var(--grey-dark);
+  }
+  
+  h3 {
+    font-family: 'OpenSansHebrewBold', Arial;
+    margin: 10px 0;
+  }
+  
+  p {
+    margin: 0;
+  }
+}

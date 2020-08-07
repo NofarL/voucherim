@@ -1,0 +1,18 @@
+
+main.about {
+  
+  @media (min-width: 1000px) {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1000px;
+  }
+
+  .cards {
+    display: flex;
+    justify-content: center;
+
+    @media (max-width: 600px) {
+      flex-wrap: wrap;
+    }
+  }
+}

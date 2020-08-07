@@ -29,10 +29,20 @@ body {
 }
 
 main {
-  margin-top: 65px;
+  margin: 100px 0 40px;
+  padding: 0 20px;
+}
 
-  &:not(.home) {
-    padding: 0 20px;
-    margin-bottom: 40px;
-  }
+button:active,
+button:focus {
+  outline: none;
+}
+
+h1 {
+  font-family: 'OpenSansHebrewLight', Arial;
+  margin: 0.5em 0;
+  line-height: 1;
+  font-size: 4em;
+  text-align: center;
+  color: var(--orange-dark);
 }
