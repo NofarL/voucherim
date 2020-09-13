@@ -1,0 +1,13 @@
+
+main.faq {
+  form {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    flex-wrap: wrap;
+  }
+
+  input {
+    border: 1px solid #ccc;
+  }
+}
