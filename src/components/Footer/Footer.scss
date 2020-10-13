@@ -17,11 +17,6 @@
   nav {
     display: flex;
     justify-content: space-between;
-
-    @media (max-width: 400px) {
-      justify-content: center;
-      flex-wrap: wrap;
-    }
   }
 
   .menu {
@@ -45,6 +40,11 @@
       &:hover:after {
         width: 100%;
       }
+    }
+
+    @media (max-width: 400px) {
+      justify-content: center;
+      flex-wrap: wrap;
     }
   }
 
